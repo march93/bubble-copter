@@ -1,7 +1,7 @@
 #========================================================\
 #
 #    ♥ ♥ ♥ Make a copy of all files ending in .log 
-#    and encrypt them for the recipeint via gpg. ♥ ♥ ♥
+#    and encrypt them for the recipient via gpg. ♥ ♥ ♥
 #   
 #===================================================================/
 
