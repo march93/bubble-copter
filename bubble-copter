@@ -2,7 +2,8 @@
 # Encrypted backups of log files.
 for x in $(ls "$2"/*log); do
         echo "$x";
-        cp "$x" "$x".$(date +'%d%m%y').bak;
-        y="$x".$(date +'%d%m%y').bak;
+        cp "$x" "$x".$(date +'%d%m%y');
+        gzip -9 "$x".$(date +'%d%m%y');
+        y="$x".$(date +'%d%m%y').gz;
         gpg --encrypt --yes --batch -r "$1" "$y" && sudo rm -f "$y";
 done
