@@ -1,6 +1,6 @@
 #!/bin/bash
 # Encrypted backups of log files.
-for x in $(ls "$2"/*log); do
+for x in $(ls "$2"/*$3); do
         echo "$x";
         cp "$x" "$x".$(date +'%d%m%y');
         gzip -f -9 "$x".$(date +'%d%m%y');
